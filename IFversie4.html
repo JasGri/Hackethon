@@ -1,0 +1,38 @@
+<!DOCTYPE.hmtl>
+
+<html>
+
+	<script>
+	function updateProfiel()
+	
+	{
+	 document.getElementById('naamkandidaat').innerHTML = document.getElementById('nieuwenaam').value; 
+	 document.getElementById('naamfunctie').innerHTML   = document.getElementById('nieuwefunctie').value;
+	 document.getElementById('vrijetekst').innerHTML    = document.getElementById('vrijeinvoer').value;
+	
+	//  Let op: value.length gebruiken, want innerHTML.length werkt niet met Chrome wel met Edge (die is minder streng).
+	
+		if (document.getElementById('vrijeinvoer').value.length < 50)
+		{
+			alert("De tekst invoer is te kort");
+		}		
+		
+	
+		
+	
+	}
+	
+	</script>
+
+	<form onsubmit="updateProfiel(); return false;">
+		Jouw naam: <input id="nieuwenaam"  type=text><br>
+		Jouw functie: <input id="nieuwefunctie"  type=text><br>
+		vrije invoer: <textarea id="vrijeinvoer" cols=30 rows=5></textarea><br>
+	<input type=submit>
+		
+	</form>
+
+Mijn naam is <B id="naamkandidaat">BIANCA</B> en ik ben een <b id="naamfunctie">JUNIOR WEBDEVELOPER.</b><br>
+<i id="vrijetekst">nog geen tekst invoer</i>
+
+</html>

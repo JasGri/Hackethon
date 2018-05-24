@@ -1,0 +1,26 @@
+<!DOCTYPE.hmtl>
+
+<html>
+
+	<script>
+	function updateProfiel()
+	
+	{
+	 document.getElementById('naam kandidaat').innerHTML = document.getElementById('nieuwe naam').value ; 
+	 document.getElementById('naam functie').innerHTML = document.getElementById('nieuwe functie').value ;
+	}
+	
+	</script>
+
+	<form onsubmit="updateProfiel(); return false;">
+		Jouw naam: <input id="nieuwe naam"  type=text><br/>
+		Jouw functie: <input id="nieuwe functie"  type=text><br/>
+	
+	<input type=submit>
+		
+	</form>
+
+Mijn naam is <B id="naam kandidaat">BIANCA</B> en ik ben een <b id="naam functie">JUNIOR WEBDEVELOPER</b>.	
+
+
+</html>
